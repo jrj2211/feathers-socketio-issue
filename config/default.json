@@ -1,0 +1,46 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "devMode": true,
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "WwbU5GQFnHNwIIeVmXrKUmoF4GM=",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "oauth": {
+      "redirect": "/",
+      "auth0": {
+        "key": "<auth0 oauth key>",
+        "secret": "<auth0 oauth secret>",
+        "subdomain": "<auth0 subdomain>",
+        "scope": [
+          "profile",
+          "openid",
+          "email"
+        ]
+      }
+    }
+  },
+  "mongodb": "mongodb+srv://joe:ybXL8da9CTEfCPCl@cluster0.csoz7.mongodb.net/zyphox_app?retryWrites=true&w=majority"
+}
