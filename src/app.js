@@ -27,7 +27,7 @@ app.configure(configuration());
 if(app.get('devMode')) {
   const webpack = require('webpack');
   const webpackDevMiddleware = require('webpack-dev-middleware');
-  const webpackOptions = require('../webpack.dev');
+  const webpackOptions = require('../webpack.common');
 
   app.use(webpackDevMiddleware(webpack(webpackOptions), {
     serverSideRender: true,
@@ -51,7 +51,6 @@ app.use('/', express.static(app.get('public')));
 // Set up Plugins and providers
 app.configure(express.rest());
 app.configure(socketio());
-
 
 
 // Configure other middleware (see `middleware/index.js`)

@@ -29,7 +29,7 @@
     "dev": "nodemon src/",
     "start": "node src/",
     "mocha": "mocha test/ --recursive --exit",
-    "build": "webpack --config webpack.dev.js"
+    "build": "webpack --config webpack.common.js"
   },
   "standard": {
     "env": [

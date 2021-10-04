@@ -7,6 +7,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  mode: "development",
+  output: {
+    path: path.resolve(__dirname, 'public'),
+    filename: '[name].js',
+  },
   entry: {
     app: path.resolve(__dirname, 'app', 'index.js'),
   },
