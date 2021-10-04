@@ -11,6 +11,7 @@ document.querySelector('[name=signin]').addEventListener('click',async  () => {
       email: document.querySelector('[name=username]').value,
       password: document.querySelector('[name=password]').value,
     });
+    message.innerHTML = 'Success!';
   } catch(err) {
     message.innerHTML = err.toString();
   }
