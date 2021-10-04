@@ -42,5 +42,5 @@
       }
     }
   },
-  "mongodb": "mongodb+srv://joe:ybXL8da9CTEfCPCl@cluster0.csoz7.mongodb.net/zyphox_app?retryWrites=true&w=majority"
+  "mongodb": ""
 }
